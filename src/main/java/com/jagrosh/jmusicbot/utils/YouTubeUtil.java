@@ -108,7 +108,7 @@ public class YouTubeUtil {
         if (!headless)
             chromeOptions.addArguments("--auto-open-devtools-for-tabs");
         else
-            chromeOptions.addArguments("--headless=new");
+            chromeOptions.addArguments("--headless=new --disable-gpu --no-sandbox");
 
         ChromeDriverService.Builder chromeDriverBuilder = new ChromeDriverService.Builder();
         if (LOGGER.isDebugEnabled())
